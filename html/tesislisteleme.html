@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tesislisteleme.css";>
+    <link rel="stylesheet" href="tesislisteleme.js";>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>Tesis Listeleme</title>
+</head>
+<body>
+  <div class="menu">
+
+    <div class="dark-mod">
+        <input onclick="myFunction()" type="checkbox" name="">
+    </div>
+
+    <div class="box">
+        <form name="search">
+            <input type="text" class="search" name="txt" 
+            onmouseout="document.search.txt.value = ''">
+        </form>
+            <i class="fas fa-search"></i>
+    </div>
+
+    <div class="logo">
+        <a href="anasayfa.html"><img src="logo.png" alt=""></a> 
+     </div>
+
+
+     <ul>
+         <li class="active"><a href="anasayfa.html">Ana Sayfa</a></li>
+         <li><a href="kategoriler.html">Kategoriler</a></li>
+         <li><a href="tesisekleme.html">Tesis Ekleme</a></li>
+         <li><a href="iletisim.html">İletişim</a></li>
+         <li><a href="">İşlemler</a>
+         <div class="iletisim-menu">
+             <ul>
+                 <li><a href="rezervasyonlarım.html">Rezervasyonlarım</a></li>
+                 <li><a href="favoritelist.html">Favorilerim</a></li>
+                 <li><a href="tesissilme.html">Tesislerim</a></li>
+
+             </ul>
+         </div>
+         </li>   
+         <li><a href="profilduzenleme.html" class="user"><i class="fas fa-user-alt"></i> Semih Sarı</a></li>
+     </ul>
+
+</div>
+
+<script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    </script>
+
+
+
+
+
+    <div class="container">
+
+        <button type="button" class="collapsible">Adres</button>
+        <div class="content">
+          <p>
+            <form action="" method="GET">
+                <label class="sehirler" for="Şehirler">Şehir Seçiniz</label>
+                <input required list="Şehirler">
+                <datalist id="Şehirler">
+                    <option value="İstanbul">
+                    <option value="Ankara">
+                    <option value="Isparta">
+                </datalist><br><br>
+
+                
+          </p>
+        </div>
+        <br>
+        
+        <button type="button" class="collapsible">Tesisler</button> 
+        <div class="content">
+            <label class="baslik" for="tesisturu">Tesis Türü Seçiniz</label><br><br>
+            
+                <input type="radio" required name="dal" value="Halısaha">
+                <label class="secenek" for="Halısaha">Halısaha</label> <br>
+           
+                <input  type="radio" name="dal" value="Basketbol">
+                <label class="secenek" for="basketbol">Basketbol Sahası</label><br>
+            
+                <input  type="radio" name="dal" value="Tenis">
+                <label class="secenek" for="Tenis">Tenis Kortu</label><br>
+            
+                <input  type="radio" name="dal" value="Fitness">
+                <label class="secenek" for="Fitness"> Fitness</label><br>
+            
+                <input  type="radio" name="dal" value="pilates">
+                <label class="secenek" for="pilates">Pilates Salonu</label><br>
+            
+                <input  type="radio" name="dal" value="yuzme">
+                <label class="secenek" for="yuzme">Yüzme Havuzu</label><br>
+            </p>
+        </div><br>
+
+
+
+
+
+            <button type="button" class="collapsible">Tesis özellikleri</button> 
+    <div class="content">
+    <p>
+      <label>Tesis Türü Seçiniz</label><br>
+      <input class="tesistipi" type="checkbox" id="wifi" name="wifi" value="wifi">
+      <label class="tesistipi" for="wifi"> Wifi</label><br>
+      <input class="tesistipi" type="checkbox" id="kredi" name="kredi" value="kredi">
+      <label class="tesistipi" for="kredi"> Kredi Kartı</label><br>
+      <input class="tesistipi" type="checkbox" id="dus" name="dus" value="dus" >
+      <label class="tesistipi" for="dus"> Duş</label><br>
+      <input class="tesistipi" type="checkbox" id="yemek" name="yemek" value="yemek" >
+      <label class="tesistipi" for="yemek"> Yemek</label><br>
+      <input class="tesistipi" type="checkbox" id="wc" name="wc" value="wc" >
+      <label class="tesistipi" for="wc"> Tuvalet</label><br>
+      <input class="tesistipi" type="checkbox" id="otopark" name="otopark" value="otopark" >
+      <label class="tesistipi" for="otopark"> Otopark</label><br>
+      <input class="tesistipi" type="checkbox" id="mescit" name="mescit" value="mescit" >
+      <label class="tesistipi" for="mescit"> Mescit</label>
+</p>
+</div><br>
+
+
+
+
+<button type="button" class="collapsible">Tesis çalışma saatleri</button> 
+<div class="content" id="saatler">
+   <p>
+          <input type="checkbox" class="saat" id="09:00-10:00" name="09:00-10:00" value="09:00-10:00">
+          <label for="09:00-10:00"> 09:00-10:00</label><br>
+          <input type="checkbox" class="saat" id="10:00-11:00" name="10:00-11:00" value="10:00-11:00">
+          <label for="10:00-11:00"> 10:00-11:00</label><br>
+          <input type="checkbox"class="saat" id="11:00-12:00" name="11:00-12:00" value="11:00-12:00" >
+          <label for="11:00-12:00"> 11:00-12:00</label><br>
+          <input type="checkbox" class="saat"id="11:00-12:00" name="11:00-12:00" value="11:00-12:00" >
+          <label for="12:00-13:00"> 12:00-13:00</label><br>
+          <input type="checkbox"class="saat" id="12:00-13:00" name="12:00-13:00" value="12:00-13:00" >
+          <label for="11:00-12:00"> 11:00-12:00</label><br>
+          <input type="checkbox" class="saat"id="13:00-14:00" name="13:00-14:00" value="13:00-14:00" >
+          <label for="13:00-14:00"> 13:00-14:00</label><br>
+          <input type="checkbox"class="saat" id="14:00-15:00" name="14:00-15:00" value="14:00-15:00" >
+          <label for="14:00-15:00"> 14:00-15:00</label><br>
+          <input type="checkbox"class="saat" id="15:00-16:00" name="15:00-16:00" value="15:00-16:00" >
+          <label for="15:00-16:00"> 15:00-16:00</label><br>
+          <input type="checkbox"class="saat" id="16:00-17:00" name="16:00-17:00" value="16:00-17:00" >
+          <label for="16:00-17:00"> 16:00-17:00</label><br>
+          <input type="checkbox" class="saat"id="17:00-18:00" name="17:00-18:00" value="17:00-18:00">
+          <label for="17:00-18:00"> 17:00-18:00</label><br>
+          <input type="checkbox" class="saat"id="18:00-19:00" name="18:00-19:00" value="18:00-19:00">
+          <label for="18:00-19:00"> 18:00-19:00</label><br>
+          <input type="checkbox" class="saat"id="19:00-20:00" name="19:00-20:00" value="19:00-20:00">
+          <label for="19:00-20:00"> 19:00-20:00</label><br>
+          <input type="checkbox"class="saat" id="20:00-21:00" name="20:00-21:00" value="20:00-21:00">
+          <label for="20:00-21:00"> 20:00-21:00</label><br>
+          <input type="checkbox" class="saat"id="21:00-22:00" name="21:00-22:00" value="21:00-22:00">
+          <label for="21:00-22:00"> 21:00-22:00</label><br>
+          <input type="checkbox" class="saat"id="22:00-23:00" name="22:00-23:00" value="22:00-23:00">
+          <label for="22:00-23:00"> 22:00-23:00</label><br>
+          <input type="checkbox" class="saat"id="23:00-00:00" name="23:00-00:00" value="23:00-00:00">
+          <label for="23:00-00:00"> 23:00-00:00</label><br>
+     </p>
+
+
+  
+        </div>
+             
+
+        
+        <br><br>
+                    <input type="submit" value="Ara">
+                    <input type="reset" value="Sıfırla"><br><br>
+        
+        <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
+    </div>
+        
+
+    <div class="container-one">
+        <table class="table">
+            <tr>
+              <th class="fotograf">Fotoğraf</th>
+              <th class="tesisadi">Tesis Adı</th>
+              <th class="tesisturu">Tesis Türü</th>
+              <th class="tesissehir">Şehir</th>
+              <th class="tesisucreti">Tesis Ücreti</th>
+            </tr>
+            
+            <tr data-href="tesissayfasi.html">
+              <td><img class="tesisfotograf" src="w2.jpg" ></td>
+              <td class="tesisadi">Avrupai Fitness Salonu</td>
+              <th class="tesisturu">Fitness</th>
+              <th class="tesissehir">Ankara</th>
+              <th class="tesisucreti">360tl</th>
+            </tr>
+           
+            
+            <tr data-href="https://www.google.com">
+                <td><img class="tesisfotograf" src="w3.jpg" ></td>
+                <td class="tesisadi">Maddison Park Center</td>
+                <th class="tesisturu">Basketbol</th>
+                <th class="tesissehir">Isparta</th>
+                <th class="tesisucreti">150tl</th>
+            </tr>
+            <tr data-href="https://www.google.com">
+                <td><img class="tesisfotograf" src="w4.jpg" ></td>
+                <td class="tesisadi">Atatürk Olimpiyat Stadı</td>
+                <th class="tesisturu">Futbol</th>
+                <th class="tesissehir">İstanbul</th>
+                <th class="tesisucreti">1500tl</th>
+            </tr>
+            
+              
+          </table>
+
+          <script>
+              document.addEventListener("DOMContentLoaded", () => {
+
+                    const rows= document.querySelectorAll("tr[data-href]");
+
+                    rows.forEach(row => {
+                        row.addEventListener("click", () => {
+                            window.location.href = row.dataset.href;
+                        });
+                    });
+              });
+          </script>
+    </div>
+
+
+
+    <div class="container-six">
+        <div class="footer">
+            <div class="footer-item">
+                <a href="iletisim.html">İletişim</a>
+            </div>
+    
+            <div class="footer-item">
+                <a href="">Hakkımızda</a>
+            </div>
+    
+            <div class="footer-item">
+                <a href="kullanicisozlesmesi.html" >Kullanıcı Sözleşmesi</a>
+            </div>
+    
+            <div class="footer-item">
+                <a href="gizlilikpolitikasi.html">Gizlilik Politikası</a>
+            </div>
+    
+            <div class="footer-item">
+                <div class="social_media">
+                    <h5>
+                        <a href="" id="mail" target="_blank">
+                            <i class="fas fa-envelope fa-2x" style="font-size: 45px;"></i>
+                             sporemaofficial@hotmail.com
+                        </a>
+                    </h5>
+                    <h5>
+                        <a href="" id="wp" target="_blank">
+                            <i class="fab fa-whatsapp fa-2x" style="font-size: 45px;"></i>
+                            0 507 632 1232 
+                        </a>
+                    </h5>
+                        <a class="social-media" target="_blank" href="https://www.facebook.com/efe.ozen.16">
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                        <a class="social-media" target="_blank" href="https://twitter.com/sporemaofficial">
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
+                        <a class="social-media" target="_blank" href="https://www.instagram.com/sporemaofficial/">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

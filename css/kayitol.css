@@ -1,0 +1,146 @@
+*{
+   font-family: 'Kanit', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-align: center;
+  
+}
+
+body{
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
+    background-size: cover;
+    background: url(https://miro.medium.com/max/2400/1*9bGtVyWq2Yt5TNZ3oGe8Rw.jpeg);
+}
+
+
+
+.container{
+    max-width: 600px;
+    width: 100%;
+    height: 600px;
+    background-color: #fff;
+    padding: 25px 50px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    margin:32%;
+    text-align: center;
+}
+
+
+.container .title{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: left;
+}
+
+
+.content form .user-details{
+
+    margin: 20px 0 12px 0;
+  }
+
+  form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 500px;
+    column-count: 2;
+    
+  }
+
+  form .input-box span.details{
+    display: block;
+    font-weight: 600;
+    margin-bottom: 1px;
+  }
+
+  .user-details .input-box input{
+    height: 35px;
+    width: 75%;
+    outline: none;
+    font-size: 15px;
+    border-radius: 15px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.4s ease;
+    align-items: center;
+  }
+  
+
+.user-details .input-box input:hover,
+.user-details .input-box input:focus
+{
+  border-color: purple;
+  cursor:pointer;
+}
+
+
+
+form .gender-details .gender-title{
+    font-size: 20px;
+    font-weight: 600;
+   }
+
+   form .category{
+    display: flex;
+    width: 80%;
+    margin-left: 60px ;
+    justify-content: space-between;
+    font-weight: 600;
+  }
+
+  form .category label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  form .category label .dot{
+   height: 18px;
+   width: 18px;
+   border-radius: 50%;
+   margin-right: 10px;
+   background: #d9d9d9;
+   border: 5px solid transparent;
+   transition: all 0.5s ease;
+ }
+
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three{
+   background: grey;
+   border-color: #d9d9d9;
+ }
+ form input[type="radio"]{
+   display: none;
+ }
+
+ form .button{
+    height: 45px;
+    margin: 35px 0
+  }
+
+  form .button input{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border: black;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #808080, #000000);
+ }
+
+ form .button input:hover{
+    background: linear-gradient(85deg, red, purple);
+    }
+
+    form .birthday{
+        border-width: 20px;
+    }

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sporema</title>
+    <script src="https://kit.fontawesome.com/a6e0102296.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/afd6aa68df.js" crossorigin="anonymous"></script> 
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome-free-5.15.1/css/all.css">
+    <style>
+        /* Popup (arka plan) */
+        *{
+    font-family: 'Kanit', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+     font-weight: 500;
+
+}
+        .modal {
+    display: none; /* Varsayılan olarak gizlidir */
+    position: fixed; /* Yerinde kal */
+    z-index: 1; /* Üstte */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ful Genişlik */
+    height: 100%; /* Ful Yükseklik */
+    overflow: auto; /* Gerekirse kaydırmayı etkinleştir */
+    background-color: rgb(0,0,0); /* Yedek renk */
+    background-color: rgba(0,0,0,0.4); /* Siyah w / opaklık */
+}
+
+/* İçerik / Kutu */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* % 15 üstten ve ortalanmış */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 600px; /* Ekran boyutuna bağlı olarak daha fazla veya daha az olabilir */
+}
+
+/* Kapat Düğmesi */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button input{
+    margin-top: 30px;
+    font-size: 21px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 15px;
+    width: 35%;
+    height: 40px;
+    background: #155799;
+}
+.button:hover{
+    opacity: 0.7;
+    transition: all 0.3s linear;
+}
+.saatler {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  width: 100px;
+  margin: 10px;
+  border: 2px solid #155799;
+  padding: 5px;
+  font-size: 1.15em;
+  letter-spacing: 1px;
+  color: #155799;
+  background-color: #F1F2F2;
+  transition: all 0.25s ease-in-out;
+  border-radius: 10px;
+}
+.btn:hover {
+  background-color: #155799;
+  border-color: #155799;
+  color: #F1F2F2;
+}
+.btn:active {
+  background-color: #155799;
+  border-color: #155799;
+  color: #F1F2F2;
+  box-shadow: none;
+}
+.btn:focus, .btn:active:focus {
+  background-color: #155799;
+  border-color: #155799;
+  color: #F1F2F2;
+  outline: 5px auto #155799;
+}
+.btn:visited {
+  background-color: #155799;
+  border-color: #155799;
+}
+h1{
+    text-align: center;
+    color: black;
+}
+.button input{
+    margin-top: -20px;
+    margin-left: 220px;
+    font-size: 21px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 15px;
+    width: 25%;
+    border: solid 1px;
+    height: 35px;
+    background: #296aaa;
+}
+.button:hover{
+    opacity: 0.7;
+    transition: all 0.3s linear;
+}
+details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: .5em .5em 0;
+    width: 500px;
+}
+
+summary {
+    font-weight: bold;
+    margin: -.5em -.5em 0;
+    padding: .5em;
+    
+}
+
+details[open] {
+    padding: .5em;  
+    margin-bottom: -115px;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: .5em;
+}
+.guncelle{
+    font-size: 16px;
+    font-weight: 80;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 15px;
+    width: 20%;
+    border: solid 1px;
+    height: 30px;
+    background: #437ec2;
+}
+.guncelle:hover{
+    opacity: 0.7;
+    transition: all 0.3s linear;
+    
+}
+.iptal{
+    font-size: 16px;
+    font-weight: 80;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 15px;
+    width: 20%;
+    border: solid 1px;
+    height: 30px;
+    background: #296aaa;
+}
+.btn-hover {
+    margin-top: 15px;
+    width: 20%;
+    font-size: 16px;
+    font-weight: 80;
+    color: #fff;
+    cursor: pointer;
+    height: 35px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+.btn-hover.color-9 {
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+.btn-hover.color-1 {
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+.container-six{
+    font-size: 25px;
+    margin-top: 1   50px;
+    border-top: 1px solid;
+}
+
+.footer{
+    column-count: 2;
+    text-align: center;
+    column-rule:solid 1px;
+}
+
+.footer a{
+    display: inline;
+    padding-bottom: 20px;
+    font-size: 23px;
+    text-decoration: none;
+    color:unset;
+}
+
+.footer a:hover{
+    color: gray;
+}
+
+.footer i{
+    margin: 15px;
+
+}
+
+.footer .footer-item{
+    margin: 20px;
+
+}
+
+#mail:hover{
+    color: #0073C6;
+}
+
+#wp:hover{
+    color: #56CB63;
+}
+.fa-facebook:hover{
+    color:#3C538C;
+}
+.fa-twitter:hover{
+    color:#1DA1F2;
+}
+.fa-instagram:hover{
+    color:#BA3491;
+}
+
+
+.rez1{
+    margin-bottom: 592px;
+    margin-top: 120px;
+}
+*{
+    font-family: 'Kanit', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   font-weight: 600;
+   
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.dark-mod{
+    
+  float: right;
+    transform: translate(-50%,-50%);
+    margin-top: 50px;
+}
+
+input[type="checkbox"]{
+    position: relative;
+    width: 50px;
+    height: 20px;
+    -webkit-appearance: none;
+    background: #272133;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px rgba(0,0 ,0 ,.2 );
+    transition: .5s;
+}
+
+input:checked[type="checkbox"]{
+    background: #DD4453;
+}
+
+input[type="checkbox"]:before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    transform: scale(1.1);
+    transition: .5s;
+    box-shadow: 0 2px 5px rgba(0,0 ,0 ,.2 );
+}
+
+input:checked[type="checkbox"]:before{
+    left: 30px;
+}
+
+/*arama butonu*/
+
+.box{
+    
+    position: absolute;
+    top: 30%;
+    right: 8%;
+    
+}
+.input {
+    padding: 10px;
+    width: 42px;
+    height: 40px;
+    background: none;
+    border: 4px solid #DD4453;
+    border-radius: 50px;
+    box-sizing: border-box;
+    color: #DD4453;
+    outline: none;
+    transition: .5s;
+}
+.box:hover input{
+    width: 150px;
+    background: #272133;
+    border-radius: 10px;
+}
+.box i{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translate(-50%,-50%);
+    font-size: 16px;
+    color: #DD4453;
+    transition: .2s;
+}
+
+
+.menu img{
+    float: left;
+    width: 200px;
+    margin: 5px;
+    margin-top: -45px;
+}
+
+
+.menu{ 
+    text-align: center;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: black;
+}
+
+
+.menu ul{
+    display: inline-flex;
+    list-style-type: none;
+   margin: 15px;
+   margin-left: -90px;
+}
+
+.menu ul li{
+    width: 140px;
+    padding: 15px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.active, .menu ul li:hover{
+    background-color: #DD4453;
+    border-radius: 15px;
+}
+
+.iletisim-menu{
+    display: none;
+}
+
+.menu ul li:hover .iletisim-menu{
+display: block;
+position :absolute;
+margin-top: 15px;
+margin-left: -20px;
+font-size: 16px;
+background-color: black;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+
+
+.menu ul li:hover .iletisim-menu ul{
+display: inline;
+}
+
+.menu ul li:hover .iletisim-menu ul li{
+   background: transparent;
+}
+
+.menu ul li:hover .iletisim-menu ul li a:hover{
+    color: #DD4453;
+}
+
+.dark-mode{
+    background-color: white;
+    color: black;
+}
+    </style>
+</head>
+<body>
+    <div class="menu">
+
+        <div class="dark-mod">
+            <input onclick="myFunction()" type="checkbox" name="">
+        </div>
+
+        <div class="box">
+            <form name="search">
+                <input type="text" class="input" name="txt" 
+                onmouseout="document.search.txt.value = ''">
+            </form>
+                <i class="fas fa-search"></i>
+        </div>
+
+        <div class="logo">
+            <a href="anasayfa.html"><img src="logo.png" alt=""></a> 
+         </div>
+ 
+ 
+         <ul>
+             <li class="active"><a href="anasayfa.html">Ana Sayfa</a></li>
+             <li><a href="kategoriler.html">Kategoriler</a></li>
+             <li><a href="tesisekleme.html">Tesis Ekleme</a></li>
+             <li><a href="iletisim.html">İletişim</a></li>
+             <li><a href="">İşlemler</a>
+             <div class="iletisim-menu">
+                 <ul>
+                     <li><a href="#">Rezervasyonlarım</a></li>
+                     <li><a href="favoritelist.html">Favorilerim</a></li>
+                     <li><a href="tesissilme.html">Tesislerim</a></li>
+ 
+                 </ul>
+             </div>
+             </li>   
+             <li><a href="profilduzenleme.html" class="user"><i class="fas fa-user-alt"></i> Semih Sarı</a></li>
+         </ul>
+    </div>
+
+    <script>
+        function myFunction() {
+           var element = document.body;
+           element.classList.toggle("dark-mode");
+        }
+        </script>
+        
+    <div class="rez1">
+
+        <details>
+            <summary>Aktif Rezervasyonlarım</summary>                                                                                                                                      
+           <p>1 (Bir) adet 01/02/2021 13:00/14:00 tarihine rezervasyonunuz bulunmaktadır.</p>
+           
+           <button id="myBtn" class="btn-hover color-9">Güncelle</button>  <button class="btn-hover color-1" onClick="location.href='anasayfa.html'">İptal et</button>
+        </details>
+    </div>
+    <div class="container-six">
+        <div class="footer">
+            <div class="footer-item">
+                <a href="iletisim.html">İletişim</a>
+            </div>
+    
+            <div class="footer-item">
+                <a href="">Hakkımızda</a>
+            </div>
+    
+            <div class="footer-item">
+                <a href="kullanicisozlesmesi.html" >Kullanıcı Sözleşmesi</a>
+            </div>
+    
+            <div class="footer-item">
+                <a href="gizlilikpolitikasi.html">Gizlilik Politikası</a>
+            </div>
+    
+            <div class="footer-item">
+                <div class="social_media">
+                    <h5>
+                        <a href="" id="mail" target="_blank">
+                            <i class="fas fa-envelope fa-2x" style="font-size: 45px;"></i>
+                             sporemaofficial@hotmail.com
+                        </a>
+                    </h5>
+                    <h5>
+                        <a href="" id="wp" target="_blank">
+                            <i class="fab fa-whatsapp fa-2x" style="font-size: 45px;"></i>
+                            0 507 632 1232 
+                        </a>
+                    </h5>
+                    <a class="social-media" target="_blank" href="https://www.facebook.com/efe.ozen.16">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                    <a class="social-media" target="_blank" href="https://twitter.com/sporemaofficial">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                    <a class="social-media" target="_blank" href="https://www.instagram.com/sporemaofficial/">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+   <h1>Rezervasyon Güncelleme</h1>
+        <div class="saatler"> 
+            <button class="btn">09:00 10:00</button>
+            <button class="btn">09:00 10:00</button>
+            <button class="btn">10:00 11:00</button>
+            <button class="btn">11:00 12:00</button>
+            <button class="btn">12:00 13:00</button>
+            <button class="btn">13:00 14:00</button>
+            <button class="btn">14:00 15:00</button>
+            <button class="btn">15:00 16:00</button>
+            <button class="btn">17:00 18:00</button>
+            <button class="btn">18:00 19:00</button>
+            <button class="btn">19:00 20:00</button>
+            <button class="btn">20:00 21:00</button>
+            <button class="btn">21:00 22:00</button>
+            <button class="btn">22:00 23:00</button>
+            <button class="btn">23:00 00:00</button>
+            <button class="btn">00:00 01:00</button>
+            
+        </div>
+        <form action="https://www.olleyy.com">
+            <div class="button">
+              
+                <input type="submit" value="Güncelle">   
+              </div> 
+          </form>
+   
+</div>
+
+
+<script>
+    // Popup Al
+var modal = document.getElementById('myModal');
+
+// Kipi açan düğmeyi al
+var btn = document.getElementById("myBtn");
+
+// Kipi kapatan <span> öğesini edinin
+var span = document.getElementsByClassName("close")[0];
+
+// Kullanıcı düğmeyi tıklattığında
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// Kullanıcı <span> (x) düğmesini tıkladığında, popup
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Kullanıcı modelden başka herhangi bir yeri tıklattıysa, onu kapatın.
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

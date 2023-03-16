@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesis Sayfası</title>
+    <link rel="stylesheet" href="tesissayfasi.css";>
+    <link rel="stylesheet" href="tesissayfasi.js";>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo:700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/a6e0102296.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css";>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $('.click').click(function() {
+        if ($('.click span').hasClass("fa-star")) {
+                $('.click').removeClass('active')
+            setTimeout(function() {
+                $('.click').removeClass('active-2')
+            }, 30)
+                $('.click').removeClass('active-3')
+            setTimeout(function() {
+                $('.click span').removeClass('fa-star')
+                $('.click span').addClass('fa-star-o')
+            }, 15)
+        } else {
+            $('.click').addClass('active')
+            $('.click').addClass('active-2')
+            setTimeout(function() {
+                $('.click span').addClass('fa-star')
+                $('.click span').removeClass('fa-star-o')
+            }, 150)
+            setTimeout(function() {
+                $('.click').addClass('active-3')
+            }, 150)
+            $('.info').addClass('info-tog')
+            setTimeout(function(){
+                $('.info').removeClass('info-tog')
+            },1000)
+        }
+    })
+    });
+    </script>
+
+    
+    
+        
+</head>
+<body>
+    
+  <div class="menu">
+
+    <div class="dark-mod">
+        <input onclick="myFunction()" type="checkbox" name="">
+    </div>
+
+    <div class="box">
+        <form name="search">
+            <input type="text" class="search" name="txt" 
+            onmouseout="document.search.txt.value = ''">
+        </form>
+            <i class="fas fa-search"></i>
+    </div>
+
+    <div class="logo">
+      <a href="anasayfa.html"><img src="logo.png" alt=""></a> 
+   </div>
+
+
+   <ul>
+       <li class="active"><a href="anasayfa.html">Ana Sayfa</a></li>
+       <li><a href="kategoriler.html">Kategoriler</a></li>
+       <li><a href="tesisekleme.html">Tesis Ekleme</a></li>
+       <li><a href="iletisim.html">İletişim</a></li>
+       <li><a href="">İşlemler</a>
+       <div class="iletisim-menu">
+           <ul>
+               <li><a href="rezervasyonlarım.html">Rezervasyonlarım</a></li>
+               <li><a href="favoritelist.html">Favorilerim</a></li>
+               <li><a href="tesissilme.html">Tesislerim</a></li>
+
+           </ul>
+       </div>
+       </li>   
+       <li><a href="profilduzenleme.html" class="user"><i class="fas fa-user-alt"></i> Semih Sarı</a></li>
+   </ul>
+</div>
+
+<script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    </script>
+    
+    
+    <section class="one">
+      <div class="title">
+        <h1>Tesis Adı</h1>
+    </div>
+    
+    <div class="click">
+      <span style="color: yellow;" class="fa fa-star-o"></span>
+      <div class="ring"></div>
+      <div class="ring2"></div>
+      <p class="info">Favorilere Eklendi</p>
+    </div>
+
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="w2.jpg" style="width:100%">
+          <div class="text">Formula 1 Tesisleri</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="w3.jpg" style="width:100%">
+          <div class="text">Formula 1 Tesisleri</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="w4.jpg" style="width:100%">
+          <div class="text">Formula 1 Tesisleri</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        
+        <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+
+        <div class="containerproperties">
+          <div class="titleproperties">
+            <h1>Tesis Özellikleri</h1>
+          </div>
+        <div class="icon">
+          
+          <span class="iconproperties">
+            <i class="fas fa-shower fa-2x"></i> Duş
+          </span>
+          
+          <span class="iconproperties">
+            <i class="fas fa-wifi fa-2x"></i> WiFi
+          </span>
+          
+          <span class="iconproperties">
+            <i class="far fa-credit-card fa-2x"></i> Kredi Kartı
+          </span>
+          
+          <span class="iconproperties">
+            <i class="fas fa-utensils fa-2x"></i>  Yemek
+          </span>
+
+          <span class="iconproperties">
+            <i class="fas fa-restroom fa-2x"></i> WC
+          </span>
+
+          <span class="iconproperties">
+            <i class="fas fa-parking fa-2x"></i> Otopark
+          </span>
+
+          <span class="iconproperties">
+            <i class="fas fa-mosque fa-2x"></i> Mescit
+          </span>
+        </div>
+
+
+        <div class="tesisaciklama">
+          <div class="titletesisaciklamasi">
+            <h1>Tesis Detayları</h1>
+          </div>
+          <span class="aciklama">
+            <p class="yazi">Aileniz ile beraber eğlenmek paha biçilemez değil mi? Uçar Spor Tesisleri işte tam da aradığınız adres, siz halı saha da unutulmaz anlar yaşarken ailenizin de eğlenebilmesi ve rahat vakit geçirebilmesi için düşünülmüş tesis düzenlemesi ile vazgeçemeyeceğiniz tercihleriniz arasında olacak.
+              Uçar Spor Tesislerinde, çocuklarınız için çocuk oyun alanımız, ailenizin keyifle sohbet edebileceği cafemiz ile tesislerimizde istediğiniz her an sizlere en iyi hizmeti verebilmek için, daima hazırız.
+              Uçar Spor Tesisleri, konumu ile doğanın yeşilliği içinde rahatça nefes alabileceğiniz bir ortam sunuyor. Otopark hizmetimiz değerli misafirlerimizin iç rahatlığı ile tesislerimizde geçirdiği vakit içerinde bütün endişeleri ortadan kaldırıyor. Sizin için önemli olan, bizim içinde daha önemlidir bilinci ile tesislerimizde geçirdiğiniz her anı sadece eğlenmeye ayırın.</p>
+          </span>
+        </div>
+
+        
+  
+      </div>
+
+<!--efe-->
+      <div class="efecontainer">
+
+
+        <p class="fake-input">
+                
+                <textarea placeholder="Yorum Yap"></textarea>
+                <img src="pop.jpg" class="yuvarlak"  />
+                
+                <div class="buttonyorum">
+                  
+                    <input type="submit" value="Yorum Yap">   
+                </div> 
+            </p>
+            <img src="pop.jpg" class="yuvarlak1"  />
+            
+            
+            <p>
+                
+                <textarea readonly  class="readonly">
+At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+        
+                </textarea>
+                    
+            </p>
+        
+            
+            <div class="likedislike">
+                <div class="bg"></div>
+                <div class="buttonld">
+                  <div class="ld">
+                    <a href="#"><i class="far fa-thumbs-up"></i></a>
+                  </div>  
+                  
+                    
+                </div>
+                
+                <div class="text"></div>
+                 
+            </div>
+            <div class="likedislike">
+                <div class="bg"></div>
+                <div class="buttonld">
+
+                  <div class="ld">
+                    <a href="#"><i class="far fa-thumbs-down"></i></a>
+                  </div>
+                    
+                    
+                </div>
+                
+                <div class="text"></div>
+                 
+            </div>
+        
+      </div>
+
+
+<!--mb-->
+
+
+
+
+      
+    
+    
+  
+  
+  
+  
+  </section>
+
+    <section class="two">
+      <div class="container2">
+
+        <div class="box">
+        <h1 class="rezervasyontitle">Rezervasyon</h1>
+        <div class="date1">
+        <input type="date" name="tarih" >
+    </div>
+
+     <div class="blabla" >
+      <div class="saatler"> 
+        
+        <button class="btn">09:00 10:00</button>
+        <button class="btn">10:00 11:00</button>
+        <button class="btn">11:00 12:00</button>
+        <button class="btn">12:00 13:00</button>
+        <button class="btn">13:00 14:00</button>
+        <button class="btn">14:00 15:00</button>
+        <button class="btn">15:00 16:00</button>
+        <button class="btn">17:00 18:00</button>
+        <button class="btn">18:00 19:00</button>
+        <button class="btn">19:00 20:00</button>
+        <button class="btn">20:00 21:00</button>
+        <button class="btn">21:00 22:00</button>
+        <button class="btn">22:00 23:00</button>
+        <button class="btn">23:00 00:00</button>
+        <button class="btn">00:00 01:00</button>
+
+    </div>
+      </div>
+      <form action="https://www.olleyy.com">
+        <div class="button">
+          <input type="submit" value="Rezervasyon Yap">   
+        </div> 
+      </form>
+
+      </div>
+    </div>
+      
+    
+    
+    
+</body>
+</html>

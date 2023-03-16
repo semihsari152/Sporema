@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesis Ekleme</title>
+    <link rel="stylesheet" href="tesisekleme.css";>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Tesis Ekleme Arayüzü</h1>
+        </div><br><br>
+        <div class="content">
+            <form action="#">
+                <div class="input-box">
+                    <span class="details">Tesis Adı</span>
+                    <input type="text" class="input" placeholder="Tesis Adı Girin" required>
+                    <div class="input-box"><br>
+                    <span class="details">Ücreti</span>
+                    <input type="number" class="input" placeholder="Tesis Ücreti Girin (₺)" required> 
+                
+                <div class="tesissehir"> <br>
+                    <span class="details">Tesisin bulunduğu şehri seçiniz</span>
+                    <input type="radio"class="sehir" id="istanbul" name="sehir" value="istanbul">
+                    <label for="istanbul">İstanbul</label>
+                    <input type="radio" class="sehir" id="Ankara" name="sehir" value="Ankara">
+                    <label for="Ankara">Ankara</label>
+                    <input type="radio" class="sehir" id="Isparta" name="sehir" value="Isparta">
+                    <label for="Isparta">Isparta</label>
+                </div>    
+                
+                <div class="input-box" name="tesis-turu"><br>
+                    <span class="details">Tesis türü seçiniz</span>
+                    <input type="radio"class="tur" id="fitness" name="tur" value="fitness">
+                    <label for="fitness">Fitness</label>
+                    <input type="radio" class="tur"id="futbol" name="tur" value="futbol">
+                    <label for="futbol">Futbol</label>
+                    <input type="radio" class="tur"id="basketbol" name="tur" value="basketbol">
+                    <label for="basketbol">Basketbol</label>
+                    
+                </div>
+                <div class="input-box" id="tesis-ozellikleri">
+                    <span class="details" name="yazilar">Tesis özelliklerini seçiniz</span>
+                    <input type="checkbox" id="wifi" name="wifi" value="wifi">
+                    <label for="wifi"> Wifi</label>
+                    <input type="checkbox" id="kredi" name="kredi" value="kredi">
+                    <label for="kredi"> Kredi Kartı</label>
+                    <input type="checkbox" id="dus" name="dus" value="dus" >
+                    <label for="dus"> Duş</label>
+                    <input type="checkbox" id="yemek" name="yemek" value="yemek" >
+                    <label for="yemek"> Yemek</label>
+                    <input type="checkbox" id="wc" name="wc" value="wc" >
+                    <label for="wc"> Tuvalet</label>
+                    <input type="checkbox" id="otopark" name="otopark" value="otopark" >
+                    <label for="otopark"> Otopark</label>
+                    <input type="checkbox" id="mescit" name="mescit" value="mescit" >
+                    <label for="mescit"> Mescit</label>
+                    
+                </div>
+                <div class="input-box" name="tesis-calisma-saatleri">
+                    <span class="details">Tesis çalışma saatlerini seçiniz</span>
+                    <input type="checkbox" class="saat" id="09:00-10:00" name="09:00-10:00" value="09:00-10:00">
+                    <label for="09:00-10:00"> 09:00-10:00</label>
+                    <input type="checkbox" class="saat" id="10:00-11:00" name="10:00-11:00" value="10:00-11:00">
+                    <label for="10:00-11:00"> 10:00-11:00</label>
+                    <input type="checkbox"class="saat" id="11:00-12:00" name="11:00-12:00" value="11:00-12:00" >
+                    <label for="11:00-12:00"> 11:00-12:00</label>
+                    <input type="checkbox" class="saat"id="11:00-12:00" name="11:00-12:00" value="11:00-12:00" >
+                    <label for="12:00-13:00"> 12:00-13:00</label><br>
+                    <input type="checkbox"class="saat" id="12:00-13:00" name="12:00-13:00" value="12:00-13:00" >
+                    <label for="11:00-12:00"> 11:00-12:00</label>
+                    <input type="checkbox" class="saat"id="13:00-14:00" name="13:00-14:00" value="13:00-14:00" >
+                    <label for="13:00-14:00"> 13:00-14:00</label>
+                    <input type="checkbox"class="saat" id="14:00-15:00" name="14:00-15:00" value="14:00-15:00" >
+                    <label for="14:00-15:00"> 14:00-15:00</label>
+                    <input type="checkbox"class="saat" id="15:00-16:00" name="15:00-16:00" value="15:00-16:00" >
+                    <label for="15:00-16:00"> 15:00-16:00</label><br>
+                    <input type="checkbox"class="saat" id="16:00-17:00" name="16:00-17:00" value="16:00-17:00" >
+                    <label for="16:00-17:00"> 16:00-17:00</label>
+                    <input type="checkbox" class="saat"id="17:00-18:00" name="17:00-18:00" value="17:00-18:00">
+                    <label for="17:00-18:00"> 17:00-18:00</label>
+                    <input type="checkbox" class="saat"id="18:00-19:00" name="18:00-19:00" value="18:00-19:00">
+                    <label for="18:00-19:00"> 18:00-19:00</label>
+                    <input type="checkbox" class="saat"id="19:00-20:00" name="19:00-20:00" value="19:00-20:00">
+                    <label for="19:00-20:00"> 19:00-20:00</label><br>
+                    <input type="checkbox"class="saat" id="20:00-21:00" name="20:00-21:00" value="20:00-21:00">
+                    <label for="20:00-21:00"> 20:00-21:00</label>
+                    <input type="checkbox" class="saat"id="21:00-22:00" name="21:00-22:00" value="21:00-22:00">
+                    <label for="21:00-22:00"> 21:00-22:00</label>
+                    <input type="checkbox" class="saat"id="22:00-23:00" name="22:00-23:00" value="22:00-23:00">
+                    <label for="22:00-23:00"> 22:00-23:00</label>
+                    <input type="checkbox" class="saat"id="23:00-00:00" name="23:00-00:00" value="23:00-00:00">
+                    <label for="23:00-00:00"> 23:00-00:00</label>
+
+                </div>
+                <div class="input-box" name=tesis-detaylari>
+                    <span class="details">Tesis Detayları</span>
+                    <textarea class="inputdetails" id="inputdetails" name="inputdetails" rows="8" cols="50" placeholder="Tesis detaylarını giriniz">
+                        
+                    </textarea>
+                </div>
+                <div class="input-box" name="tesis-foto-ekle">
+                    <span class="details">Tesis fotoğraflarını ekleyiniz</span>
+                    <form action="/action_page.php">
+                        <label for="myfile"> </label>
+                        <input type="file" class="myfile" id="myfile" name="myfile">
+                        
+                    </form>
+                </div>
+                
+                    <div class="button">
+                        <input type="submit" class="tesisekle" value="Tesis Ekle">
+                </div>
+               
+                        </div>
+                    
+                    </div>
+                </div>          
+
+            </form>
+
+            
+        </div>
+    </div>
+</body>
+</html>

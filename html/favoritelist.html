@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="favoritelist.css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sporema</title>
+<script src="https://kit.fontawesome.com/a6e0102296.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/afd6aa68df.js" crossorigin="anonymous"></script> 
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fontawesome-free-5.15.1/css/all.css">
+
+
+
+</head>
+
+
+
+<body>
+    <div class="menu">
+
+        <div class="dark-mod">
+            <input onclick="myFunction()" type="checkbox" name="">
+        </div>
+
+        <div class="box">
+            <form name="search">
+                <input type="text" class="input" name="txt" 
+                onmouseout="document.search.txt.value = ''">
+            </form>
+                <i class="fas fa-search"></i>
+        </div>
+
+        <div class="logo">
+           <a href="anasayfa.html"><img src="logo.png" alt=""></a> 
+        </div>
+
+
+        <ul>
+            <li class="active"><a href="anasayfa.html">Ana Sayfa</a></li>
+            <li><a href="kategoriler.html">Kategoriler</a></li>
+            <li><a href="tesisekleme.html">Tesis Ekleme</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+            <li><a href="">İşlemler</a>
+            <div class="iletisim-menu">
+                <ul>
+                    <li><a href="rezervasyonlarım.html">Rezervasyonlarım</a></li>
+                    <li><a href="#">Favorilerim</a></li>
+                    <li><a href="tesissilme.html">Tesislerim</a></li>
+
+                </ul>
+            </div>
+            </li>   
+            <li><a href="profilduzenleme.html" class="user"><i class="fas fa-user-alt"></i> Semih Sarı</a></li>
+        </ul>
+
+    </div>
+
+    <script>
+        function myFunction() {
+           var element = document.body;
+           element.classList.toggle("dark-mode");
+        }
+        </script>
+
+
+
+
+
+
+
+
+        
+    <h1 id="baslik">Favori Listem</h1>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>TESİS RESMİ</th>
+                <th>TESİS ADI</th>
+                <th>TESİS TÜRÜ</th>
+                <th>ŞEHİR</th>
+                <th>FİYAT</th>
+                <th> </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="tesisresmi.PNG" width="250" height="auto"></td>
+                <td>Çünür Halısaha</td>
+                <td>HALI SAHA</td>
+                <td>ISPARTA</td>
+                <td>220 </td>
+                <td>
+                    <button class="glow-on-hover" type="button">FAVORİLERDEN ÇIKART</button>
+                   
+                      
+                </td>
+            </tr>
+            <tr class="active-row">
+                <td><img src="fitnessalonu.jpg" width="250" height="auto"></td>
+                <td>Bro Fitness</td>
+                <td>Fitness Salonu</td>
+                <td>ISPARTA</td>
+                <td>150/ay</td>
+                <td>
+                    <button class="glow-on-hover" type="button">FAVORİLERDEN ÇIKART</button>
+                   
+                      
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+    
+
+
+
+
+    <div class="container-six">
+        <div class="footer">
+            <div class="footer-item">
+                <a href="iletisim.html">İletişim</a>
+            </div>
+    
+            <div class="footer-item">
+                <a href="">Hakkımızda</a>
+            </div>
+    
+            <div class="footer-item">
+                <a href="kullanicisozlesmesi.html" >Kullanıcı Sözleşmesi</a>
+            </div>
+    
+            <div class="footer-item">
+                <a href="gizlilikpolitikasi.html">Gizlilik Politikası</a>
+            </div>
+    
+            <div class="footer-item">
+                <div class="social_media">
+                    <h5>
+                        <a href="" id="mail" target="_blank">
+                            <i class="fas fa-envelope fa-2x" style="font-size: 45px;"></i>
+                             sporemaofficial@hotmail.com
+                        </a>
+                    </h5>
+                    <h5>
+                        <a href="" id="wp" target="_blank">
+                            <i class="fab fa-whatsapp fa-2x" style="font-size: 45px;"></i>
+                            0 507 632 1232 
+                        </a>
+                    </h5>
+                    <a class="social-media" target="_blank" href="https://www.facebook.com/efe.ozen.16">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                    <a class="social-media" target="_blank" href="https://twitter.com/sporemaofficial">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                    <a class="social-media" target="_blank" href="https://www.instagram.com/sporemaofficial/">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    </body>
+

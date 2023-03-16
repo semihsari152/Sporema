@@ -1,0 +1,103 @@
+*{
+    font-family: 'Kanit', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   text-align: center;
+   font-weight: 600;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+body{
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
+    background: url(https://miro.medium.com/max/2400/1*9bGtVyWq2Yt5TNZ3oGe8Rw.jpeg);
+    background-size: cover;
+}
+
+.container{
+    max-width: 600px;
+    width: 100%;
+    height: 600px;
+    background-color: #fff;
+    padding: 25px 50px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    margin:32%;
+    text-align: center;
+    align-items: center;
+}
+
+.container .title{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.content form .user-details{
+
+    margin: 20px 0 12px 0;
+  }
+
+  form .user-details .input-box{
+    margin-top: 50px;
+    width: 500px;
+  }
+
+  form .input-box span.details{
+    display: block;
+    font-weight: 600;
+    margin-bottom: 1px;
+  }
+
+  .user-details .input-box input{
+    height: 35px;
+    width: 75%;
+    outline: none;
+    font-size: 15px;
+    border-radius: 15px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.4s ease;
+    align-items: center;
+  }
+
+  .user-details .input-box input:hover,
+.user-details .input-box input:focus
+{
+  border-color: purple;
+  cursor:pointer;
+}
+
+ 
+form .button{
+    height: 45px;
+    margin-top: 50px;
+  }
+
+  form .button input{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border: black;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #808080, #000000);
+ }
+
+ form .button input:hover{
+    background: linear-gradient(85deg, red, purple);
+    }
+

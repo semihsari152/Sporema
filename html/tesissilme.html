@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tesissilme.css";>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    <title>Tesis Listeleme</title>
+</head>
+
+<body>
+
+    <div class="menu">
+
+        <div class="dark-mod">
+            <input onclick="myFunction()" type="checkbox" name="">
+        </div>
+    
+        <div class="box">
+            <form name="search">
+                <input type="text" class="search" name="txt" 
+                onmouseout="document.search.txt.value = ''">
+            </form>
+                <i class="fas fa-search"></i>
+        </div>
+    
+        <div class="logo">
+           <a href="anasayfa.html"><img src="logo.png" alt=""></a> 
+        </div>
+    
+    
+        <ul>
+            <li class="active"><a href="anasayfa.html">Ana Sayfa</a></li>
+            <li><a href="kategoriler.html">Kategoriler</a></li>
+            <li><a href="tesisekleme.html">Tesis Ekleme</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+            <li><a href="">İşlemler</a>
+            <div class="iletisim-menu">
+                <ul>
+                    <li><a href="rezervasyonlarım.html">Rezervasyonlarım</a></li>
+                    <li><a href="favoritelist.html">Favorilerim</a></li>
+                    <li><a href="#">Tesislerim</a></li>
+    
+                </ul>
+            </div>
+            </li>   
+            <li><a href="profilduzenleme.html" class="user"><i class="fas fa-user-alt"></i> Semih Sarı</a></li>
+        </ul>
+    
+    </div>
+    
+    <script>
+        function myFunction() {
+           var element = document.body;
+           element.classList.toggle("dark-mode");
+        }
+        </script>
+
+
+    <div class="tesissilbaslik">
+        <h1>Tesislerim</h1>
+    </div>
+    
+    <div class="container-one">
+        <table class="table">
+            <tr>
+              <th class="fotograf">Fotoğraf</th>
+              <th class="tesisadi">Tesis Adı</th>
+              <th class="tesisturu">Tesis Türü</th>
+              <th class="tesissehir">Şehir</th>
+              <th class="tesisucreti">Tesis Ücreti</th>
+              <th class="tesisbuton">Tesis Sil</th>
+            </tr>
+            
+            <tr>
+              <td><img class="tesisfotografi" src="w2.jpg" ></td>
+              <td class="tesisadi">Avrupai Fitness Salonu</td>
+              <th class="tesisturu">Fitness</th>
+              <th class="tesissehir">Ankara</th>
+              <th class="tesisucreti">360TL</th>
+              <th class="tesisbuton">
+                <input type="button" class="butonsil" value="Tesisimi Sil">  
+              </th>
+            </tr>
+           
+            
+            <tr >
+                <td><img class="tesisfotografi" src="w3.jpg" ></td>
+                <td class="tesisadi">Maddison Park Center</td>
+                <th class="tesisturu">Basketbol</th>
+                <th class="tesissehir">Isparta</th>
+                <th class="tesisucreti">150TL</th>
+                <th class="tesisbuton">
+                    <input type="button" class="butonsil" value="Tesisimi Sil">  
+                </th>
+            </tr>
+            <tr>
+                <td><img class="tesisfotografi" src="w4.jpg" ></td>
+                <td class="tesisadi">Atatürk Olimpiyat Stadı</td>
+                <th class="tesisturu">Futbol</th>
+                <th class="tesissehir">İstanbul</th>
+                <th class="tesisucreti">1500TL</th>
+                <th class="tesisbuton">
+                    <input type="button" class="butonsil" value="Tesisimi Sil">  
+                </th>
+            </tr>
+            
+              
+          </table>
+
+        
+    </div>
+
+
+
+
+    <div class="container-six">
+        <div class="footer">
+            <div class="footer-item">
+                <a href="" target="_blank">İletişim</a>
+            </div>
+
+            <div class="footer-item">
+                <a href="" target="_blank">Hakkımızda</a>
+            </div>
+
+            <div class="footer-item">
+                <a href="" target="_blank">Kullanıcı Sözleşmesi</a>
+            </div>
+
+            <div class="footer-item">
+                <a href="" target="_blank">Gizlilik Politikası</a>
+            </div>
+
+            <div class="footer-item">
+                <div class="social_media">
+                    <h5>
+                        <a href="" id="mail" target="_blank">
+                            <i class="fas fa-envelope fa-2x" style="font-size: 45px;"></i>
+                             sporema@hotmail.com
+                        </a>
+                    </h5>
+                    <h5>
+                        <a href="" id="wp" target="_blank">
+                            <i class="fab fa-whatsapp fa-2x" style="font-size: 45px;"></i>
+                            0 507 632 1232
+                        </a>
+                    </h5>
+                        <a class="social-media" href="" target="_blank">
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                        <a class="social-media" href="" target="_blank">
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
+                        <a class="social-media" href="" target="_blank">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

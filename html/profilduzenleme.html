@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="profilduzenleme.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sporema | Profil Düzenleme</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a6e0102296.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="menu">
+
+    <div class="dark-mod">
+        <input onclick="myFunction()" type="checkbox" name="">
+    </div>
+
+    <div class="box">
+        <form name="search">
+            <input type="text" class="input" name="txt" 
+            onmouseout="document.search.txt.value = ''">
+        </form>
+            <i class="fas fa-search"></i>
+    </div>
+
+    <div class="logo">
+       <a href="anasayfa.html"><img src="logo.png" alt=""></a> 
+    </div>
+
+
+    <ul>
+        <li class="active"><a href="anasayfa.html">Ana Sayfa</a></li>
+        <li><a href="kategoriler.html">Kategoriler</a></li>
+        <li><a href="tesisekleme.html">Tesis Ekleme</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+        <li><a href="">İşlemler</a>
+        <div class="iletisim-menu">
+            <ul>
+                <li><a href="rezervasyonlarım.html">Rezervasyonlarım</a></li>
+                <li><a href="favoritelist.html">Favorilerim</a></li>
+                <li><a href="tesissilme.html">Tesislerim</a></li>
+
+            </ul>
+        </div>
+        </li>   
+        <li><a href="profilduzenleme.html" class="user"><i class="fas fa-user-alt"></i> Semih Sarı</a></li>
+    </ul>
+
+</div>
+
+<script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    </script>   
+  
+<div class="container">
+    
+    <div class="title">Profil Ayarları</div>
+        <div class="content">
+                <form action="#">
+                    <div class="photo-box">
+                        <a href="">
+                         <i class="fas fa-user-alt"></i>
+                        </a>
+                     </div>
+                  <div class="button1">
+                      <a href="sifre_sifirlama.html" target="_blank">Şifre Sıfırlama</a>
+                  </div>
+                    <div class="user-details">
+                        <div class="input-box">
+                            <span class="details">Adı</span>
+                            <input type="text" placeholder="Adınız" >
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Soyad</span>
+                            <input type="text" placeholder="Soyadınızı Girin" >
+                          </div>
+                          <div class="input-box">
+                            <span class="details">E-mail</span>
+                            <input type="text" placeholder="E-mail Adresinizi Girin" >
+                          </div>
+                          <div class="input-box">
+                            <span class="details">TC Kimlik Numarası</span>
+                            <input type="number" placeholder="TC Kimlik Numaranızı Girin" >
+                        </div>
+                          <div class="input-box">
+                            <span class="details">Telefon Numarası</span>
+                            <input type="tel" placeholder="Numaranızı Girin" >
+                          </div>
+                          <div class="input-box">
+                            <span class="details">Doğum Tarihinizi Giriniz</span>
+                            <input type="date" name="age" >
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Adres</span>
+                            <textarea name="" id="" cols="45" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="button1">
+                        <input type="submit" value="Onayla">
+                      </div>
+
+                    <div class="title">Üyelik Silme</div>
+                    <div class="button1">
+                      <a href="uyeliksilme.html" target="_blank">Üyelik Silme</a>
+                  </div>
+
+
+                </form>
+        </div>
+</div>
+
+
+
+
+    
+</body>
+</html>

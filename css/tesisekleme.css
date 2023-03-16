@@ -1,0 +1,150 @@
+body {
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
+    background-color: gray;
+    background-size: cover;
+    background-image: url("background.jpeg");
+  } 
+
+*{
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.container{
+    max-width: 600px;
+    width: 100%;
+    height: 875px;
+    background-color: #fff;
+
+    padding: 15px 50px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    margin:32%;
+    text-align: center;
+}
+
+.container .title{
+    font-size: 24px;
+    font-weight: 600;
+    text-align: left;
+    background-color: black;
+    position: relative;
+    animation-name: example;
+    animation-duration: 3s;  
+    animation-fill-mode: forwards;
+}
+
+@keyframes example {
+    from {top: 0px;}
+    from {top: -150px; background-color: black;}
+    to {top: 50px; background-color: white;}
+    
+  }
+
+form .input-box{
+    margin-bottom: 15px;
+    width: 500px;
+    columns: count 1px;
+    
+}
+
+
+.input{
+    width: 304px;
+    
+}
+.input:hover{
+    background-color: #f4511e;
+    opacity: 0.5;
+} 
+
+.input:focus{
+    background-color:rgb(2, 234, 145);
+}
+
+
+.details {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    
+}
+
+.content.input-box.details.input{
+    padding: top 50px bottom 50px;
+}
+
+.button .tesisekle {
+    align-self: center;
+    background-color: #f4511e;
+    opacity: 0.8;
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    color: #41403e;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Neucha, sans-serif;
+    font-size: 1rem;
+    line-height: 23px;
+    outline: none;
+    padding: .75rem;
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button .tesisekle:hover {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+    transform: translate3d(0, 2px, 0);
+    background-color: rgb(2, 234, 145);
+  }
+  
+  .button .tesisekle:focus {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+  }
+
+.myfile{
+    width: 180px;   
+}
+
+.inputdetails{
+    width: 500px;
+    height: 100px;
+}
+
+.inputdetails:hover{
+    background-color: #f4511e;
+    opacity: 0.5;
+}
+
+.inputdetails:focus{
+    background-color:rgb(2, 234, 145);
+}
+
+.input-box .saat{
+    font-size: 24px;
+}
+
+
+
+
